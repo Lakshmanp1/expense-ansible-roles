@@ -9,7 +9,7 @@
     state: started
     enabled: yes
 
-- name: delete exist htmld irectory
+- name: delete exist html irectory
   ansible.builtin.file:
     state: absent 
     path: /usr/share/nginx/html
@@ -28,6 +28,7 @@
   ansible.builtin.unarchive:
     src: /tmp/frontend.zip
     dest: /usr/share/nginx/html
+    remote_src: true
 
 - name: copy the conf file
   ansible.builtin.copy:
