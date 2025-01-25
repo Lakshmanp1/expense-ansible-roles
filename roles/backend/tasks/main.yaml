@@ -29,7 +29,7 @@
 
 - name: install nodejs dependies
   community.general.npm:
-    path: /app/
+    path: /app
 
 - name: copy the backend.service file 
   ansible.builtin.copy:
@@ -63,7 +63,7 @@
     name: backend
     daemon_reload: true
     enabled: true
-    state: started
+    state: restarted
     
 
 
