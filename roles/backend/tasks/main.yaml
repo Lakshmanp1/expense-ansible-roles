@@ -54,10 +54,10 @@
     state: import
     name: all
     target: /app/schema/backend.sql
-    login_host: "{{ login_host }}"
+    login_host: "{{ mysql_host }}"
     login_password: "{{ login_password }}"
     login_user: "{{ login_user }}"
-    
+
 - name: daemon relod, enable and restart the backend
   ansible.builtin.systemd_service: 
     name: backend
