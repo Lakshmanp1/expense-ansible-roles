@@ -54,7 +54,7 @@
     state: import
     name: all
     target: /app/schema/backend.sql
-    login_host: "{{ mysql_host }}"
+    login_host: "{{ MYSQL_HOST }}"
     login_password: "{{ login_password }}"
     login_user: "{{ login_user }}"
 
